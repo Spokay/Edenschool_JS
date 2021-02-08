@@ -11,9 +11,12 @@
     //     alert("You are " + age + " years old");
     // }
     let age = prompt("How old are you ?");
-    age = parseInt(age);
-    if (isNaN(age)){
-            alert("you didn\'t answer to the question");
+
+    if (age == '' || age == null){
+        alert("answer please");
+    }
+    else if (isNaN(age)){
+            alert("please add a number");
     }
     else{
         if (age >= 16){
