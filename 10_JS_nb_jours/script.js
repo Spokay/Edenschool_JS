@@ -13,7 +13,7 @@ if (isNaN(moisChoisis)){
 }
 
 else {
-    if (!isNaN(moisChoisis) && moisChoisis <= 12 && moisChoisis != 0){
+    if (!isNaN(moisChoisis) && moisChoisis != 0 && moisChoisis <= 12){
         document.write(mois[moisChoisis] + ' comporte ' + nbDeJoursParMois[moisChoisis] + ' jours');
     }
     else {
