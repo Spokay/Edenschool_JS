@@ -8,12 +8,20 @@
 // La fonction split(), permet de transformer une chaine de caractère en tableau.
 // La fonction reverse(), permet de retourner les éléments d'un tableau.
 
+let motChoisis = prompt('Choisissez un mot');
+let motChoisisCopy = motChoisis;
 
 function retourneLaPhrase(str) {
     let arrayStr = str.split("");
     arrayStr.reverse();
-    for (let i = 0; i < arrayStr.length; i++){
-        document.write(arrayStr[i]);
+    let strText = arrayStr.join("");
+    if(strText === motChoisisCopy){
+        document.write(strText + ' est un palindrome');
+    }
+    else {
+        document.write(strText);
     }
 }
-retourneLaPhrase("Bonjour à tous");
+
+retourneLaPhrase(motChoisis);
+
