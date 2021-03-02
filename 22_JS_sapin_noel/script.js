@@ -6,7 +6,6 @@ let startStars = 0;
 
 for (let stagesI = 0; stagesI < numberOfStages; stagesI++){
     document.write('<table style="display: flex; justify-content: center; text-align: center">');
-
     for(let linesI = 0; linesI <= totalStars; linesI++){
         document.write('<tr style="display: flex; justify-content: center">');
         for (let starsI = 0; starsI <= bonusStars; starsI++){
@@ -20,7 +19,6 @@ for (let stagesI = 0; stagesI < numberOfStages; stagesI++){
     startStars += 2;
     bonusStars = startStars;
 }
-
 for (let i = 0; i < numberOfStages; i++){
     document.write('<p style="display: flex; justify-content: center; margin: 0">|</p><br>');
 }

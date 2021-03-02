@@ -1,5 +1,5 @@
 let nb1 = parseInt(prompt('Entrez le premier nombre de votre opération'));
-let operateur = prompt('Quel opérateur voulez vous utiliser');
+let operateur = prompt('Quel opération voulez vous utiliser');
 let nb2 = parseInt(prompt('Entrez le premier nombre de votre opération'));
 let res;
 
