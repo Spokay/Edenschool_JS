@@ -10,10 +10,11 @@ let janI = 0;
 
 document.write('<table cellpadding="15" border="1" style="border-collapse: collapse">');
 document.write('<caption>Janvier</caption>');
+document.write('<tr>');
 for(let i = 1; i <= jan.length; i++){
     if (i % 8 === 0){
         document.write('<td style="font-size: 20px; color: white; background-color: #000080; text-align: center">' + 'J' + i + '</td>');
-        document.write('<tr></tr>');
+        document.write('</tr><tr>');
         for (let degrees = 0; degrees < 8; degrees++) {
             if (jan[janI] >= 15){
                 document.write('<td style="font-size: 20px; text-align: center; background-color: #f4c7c2">' + jan[janI] + '</td>');
@@ -29,12 +30,12 @@ for(let i = 1; i <= jan.length; i++){
             janI++;
         }
 
-        document.write('<tr class="line"></tr>');
+        document.write('</tr><tr>');
     }
 
     else if (i === 31){
-        document.write('<td style="font-size: 20px; background-color: #000080; text-align: center">' + 'J' + i + '</td>');
-        document.write('<tr></tr>');
+        document.write('<td style="font-size: 20px; background-color: #000080; color: white; text-align: center">' + 'J' + i + '</td>');
+        document.write('</tr><tr>');
         for (let degrees = 0; degrees < 7; degrees++) {
             if (jan[janI] >= 15){
                 document.write('<td style="font-size: 20px; text-align: center; background-color: #f4c7c2">' + jan[janI] + '</td>');
