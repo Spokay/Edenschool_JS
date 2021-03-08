@@ -15,27 +15,32 @@
 
 
 
-
+let ask = parseInt(prompt('Choisissez un chiffre a convertir en chiffre romain'));
 let valeurDecimale = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
 let chiffreRomains = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
-let str = "";
-function convertisseursRomain(num){
 
+function convertisseurRomain(num){
+    let str = "";
     for (let i = 0; i < valeurDecimale.length; ++i ){
         while ( num >= valeurDecimale[i] ){
             num -= valeurDecimale[i];
             str += chiffreRomains[i];
         }
 
-        if ( num == 0 ){
+        if ( num === 0 ){
             break;
         }
     }
 
 return str;
 }
+if(isNaN(ask)){
+    alert('Veuillez rentrer un nombre');
+}
+else {
+    alert(ask + ' est égal à ' + convertisseurRomain(ask) + ' en chiffres romains');
+}
 
-console.log(convertisseurRomain(4550));
 
 // 36 = XXXVI
 // 2000 = MM
